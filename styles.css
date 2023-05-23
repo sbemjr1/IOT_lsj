@@ -1,0 +1,15 @@
+body {
+  background-color: whitesmoke;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+h3 {
+  text-align: center;
+}
+span {
+  font-weight: bold;
+}
+.imgBox {
+  width: 100px;
+  height: 100px;
+}

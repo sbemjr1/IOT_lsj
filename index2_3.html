@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 폼 만들기</title>
+  </head>
+  <body>
+    <h3>로그인 폼</h3>
+    <hr />
+    <form>
+      <!--폼 요소 그룹핑-->
+      <fieldset>
+        <legend>Login</legend>
+        <label>Username</label>
+        <!--minlength로 최소 입력 글자 수 설정하고 required를 이용해서 입력하지 않으면 submit 되지 않음-->
+        <input type="text" minlength="8" required />
+        <label>Password</label>
+        <!--minlength로 최소 입력 글자 수 설정하고 required를 이용해서 입력하지 않으면 submit 되지 않음-->
+        <input type="password" minlength="8" required />
+        <input type="submit" value="login" />
+      </fieldset>
+    </form>
+  </body>
+</html>

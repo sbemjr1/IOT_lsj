@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>도형 서식 폼 만들기</title>
+  </head>
+  <body>
+    <h3>도형 서식 폼 만들기</h3>
+    <hr />
+    <form>
+      <!--폼 요소 그룹핑-->
+      <fieldset>
+        <legend>도형 서식 입력</legend>
+        <label>선종류</label>
+        <select name="line">
+          <!--3가지 중 하나 선택 가능-->
+          <option value="1">점선</option>
+          <option value="2">실선</option>
+          <option value="3">선없음</option></select
+        ><br />
+
+        <label>선두께</label>
+        <!--step으로 한번 클릭 올라가는 수를 정할 수 있음-->
+        <input type="number" min="0" step="1" />
+        <label>선색</label>
+        <input type="color" value="#FFF" /><br />
+
+        <label>투명도(0~100)</label>
+        <!--0-100까지 범위를 설정하여 마우스로 원하는 범위 설정가능-->
+        <input type="range" min="0" max="100" />
+      </fieldset>
+    </form>
+  </body>
+</html>

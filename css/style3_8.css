@@ -1,0 +1,31 @@
+@keyframes scaleXOrigin {
+  /*애니메이션을 3단계로 구성*/
+  0% {
+    /*왼쪽 위치 고정*/
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50% {
+    /*왼쪽 위치는 고정하고 이미지 폭이 2배로 늘어남*/
+    transform: scaleX(2);
+    transform-origin: left;
+  }
+  100% {
+    /*왼쪽 위치는 고정하고 이미지 폭이 원상태로 돌아감*/
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+body {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+img {
+  width: 300px;
+  height: 300px;
+  margin-top: 50px;
+}
+/*이미지에 마우스를 올리면 폭이 2초동안 linear하게 늘어남*/
+img:hover {
+  animation: scaleXOrigin 2s linear;
+}

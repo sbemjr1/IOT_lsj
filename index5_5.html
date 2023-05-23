@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>라면을 끓이는 순서</title>
+  </head>
+  <body>
+    <h3>라면을 끓이는 순서</h3>
+    <hr />
+    <ol type="A" onclick="this.style.backgroundColor='yellowgreen'">
+      <!--list 부분을 클릭하면 배경색 변경-->
+      <li>물을 끓인다</li>
+      <li>라면과 스프를 넣는다</li>
+      <li>파를 썰어 넣는다</li>
+      <li>5분 후 <strong>맛있게</strong> 먹는다</li>
+    </ol>
+    <script>
+      const liArray = document.querySelectorAll("li"); // li 태그들을 배열로 가져옵니다.
+      for (i = 0; i < liArray.length; i++) {
+        const obj = liArray[i]; // 배열의 각 요소에 대해 obj 변수에 대입합니다.
+        obj.style.color = "green"; // obj의 color 스타일을 green으로 설정합니다.
+      }
+    </script>
+  </body>
+</html>

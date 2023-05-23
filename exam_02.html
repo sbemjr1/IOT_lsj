@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>폼 스타일 주기</title>
+    <style>
+      /* 사진 처럼 꾸미기 */
+      li {
+        list-style-type: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      label {
+        text-align: right;
+        width: 90px;
+        float: left;
+      }
+
+      input,
+      textarea {
+        margin-left: 5px;
+      }
+
+      fieldset {
+        border: 0px;
+      }
+
+      /* :focus를 이용해 focus됐을 때 변화를 줌 */
+      input:focus {
+        background-color: aliceblue;
+        color: red;
+        font-size: 120%;
+      }
+
+      textarea:focus {
+        background-color: aliceblue;
+        color: red;
+        font-size: 120%;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>CONTACT US</h3>
+    <hr />
+    <form>
+      <!-- li를 이용했고 문제의 사진과 같이 출력되게끔 size를 조절하고, placeholder를 나타내게 하였다.-->
+      <fieldset>
+        <ul>
+          <li>
+            <label for="name">Name </label>
+            <input type="text" size="40" id="name" />
+          </li>
+          <li>
+            <label>Email </label>
+            <input type="email" size="30" placeholder="elvis@graceland.com" />
+          </li>
+          <li>
+            <label>Comment</label>
+            <textarea
+              cols="30"
+              rows="3"
+              placeholder="메시지를 남겨주세요"
+            ></textarea>
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+  </body>
+</html>

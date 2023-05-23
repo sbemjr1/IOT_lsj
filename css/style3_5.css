@@ -1,0 +1,26 @@
+#menubar {
+  background: olive;
+  width: 250px;
+  /*위아래 10px, 좌우 15px로 padding을 설정*/
+  padding: 10px 15px;
+}
+#menubar ul {
+  margin: 0;
+  padding: 0;
+}
+#menubar ul li {
+  /*li의 블릿 제거*/
+  list-style-type: none;
+  /*위아래 0px, 좌우 15px로 padding을 설정*/
+  padding: 0px 15px;
+}
+#menubar ul li a {
+  color: white;
+  /*a태그에 설정된 text-decoration을 제거하고 글씨를 두껍게 설정*/
+  text-decoration: none;
+  font-weight: bold;
+}
+/*메뉴 아이템에 마우스를 올리면 글자 색 변경*/
+#menubar ul li a:hover {
+  color: violet;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" ondblclick="randomColor()">
+  <head>
+    <meta charset="UTF-8" />
+    <title>랜덤 색상 출력</title>
+  </head>
+  <body>
+    <h3>바탕 아무 곳에나 더블 클릭</h3>
+    <hr />
+    <p>
+      바탕 아무 곳이나 <strong>더블클릭</strong>하면 배경색이 랜덤하게 변합니다.
+    </p>
+
+    <script>
+      const randomColor = () => {
+        // 0~255 사이의 랜덤한 수를 생성하여 r,g,b 변수에 저장
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+
+        // RGB 값으로 랜덤한 색상을 생성하여 body의 배경색으로 지정하는 코드
+        document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+      };
+    </script>
+  </body>
+</html>

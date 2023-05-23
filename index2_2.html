@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>과제 2-2</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+      }
+      div {
+        /*flex사용해서 div를 inline 형태로 정렬*/
+        display: flex;
+        height: 70%;
+      }
+      /*class명을 찾아서 가로와 세로 길이를 지정하고 색상 부여, height에서 %는 body에서 height를 100vh로 정해둬서 사용가능,*/
+      .header {
+        width: 100%;
+        height: 15%;
+        background-color: yellow;
+      }
+      .nav {
+        width: 15%;
+        background-color: orange;
+      }
+      .section {
+        width: 70%;
+        background-color: olivedrab;
+      }
+      .aside {
+        width: 15%;
+        background-color: orange;
+      }
+      .footer {
+        width: 100%;
+        height: 15%;
+        background-color: plum;
+      }
+    </style>
+  </head>
+  <body>
+    <!--시멘틱 태그의 장점은 코드를 보기 편하다. div로 사용하고 class명을 부여해도 상관없음-->
+    <header class="header">header</header>
+    <div>
+      <nav class="nav">nav</nav>
+      <section class="section">section</section>
+      <aside class="aside">aside</aside>
+    </div>
+    <footer class="footer">footer</footer>
+  </body>
+</html>

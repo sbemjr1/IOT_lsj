@@ -1,0 +1,20 @@
+div {
+  width: 25%;
+  /*3px 두께의 실선을 border로 설정*/
+  border: 3px solid rgb(215, 176, 68);
+  /*flex를 이용하여 중앙에 위치*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 50px;
+}
+div h4 {
+  font-weight: bold;
+  font-size: 20px;
+}
+/*li의 숫자 목록의 텍스를 꾸며줌*/
+ol li::marker {
+  color: olive;
+  font-size: 40px;
+}

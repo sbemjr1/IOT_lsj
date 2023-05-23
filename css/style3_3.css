@@ -1,0 +1,31 @@
+/*class명을 이용하여 text-shadow로 그림자 설정*/
+.yellowShadow {
+  color: yellow;
+  text-shadow: 2px 2px 5px black;
+  /*중앙에 위치하도록 함*/
+  text-align: center;
+  font-size: 30px;
+}
+img {
+  width: 300px;
+  height: 300px;
+  /*1px 두께의 검은색 실선을 border로 설정*/
+  border: 1px solid black;
+  margin-right: 50px;
+}
+/*img에 마우스를 올리면 설정한 box-shadow가 보이도록 함*/
+img:hover {
+  box-shadow: 0px 0px 5px rgb(10, 45, 160);
+}
+/*body 좌우로 margin 설정*/
+body {
+  background-color: aliceblue;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+/*flex를 이용하여 이미지를 중앙에 보기 좋게 정렬함*/
+.imgSection {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}

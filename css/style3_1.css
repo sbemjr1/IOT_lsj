@@ -1,0 +1,8 @@
+/*첫 글자 색상 설정*/
+h3::first-letter {
+  color: red;
+}
+/*마우스를 위에 올리면 실행됨*/
+li:hover {
+  background: yellowgreen;
+}

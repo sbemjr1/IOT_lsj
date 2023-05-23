@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>z-index 스타일 프로퍼티</title>
+    <style>
+      /* 카드 스타일 */
+      .card {
+        position: absolute;
+        top: 100px;
+        left: 50px;
+        width: 200px;
+        height: 300px;
+        background-color: white;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+      }
+      /* 카드 이미지 스타일 */
+      .card img {
+        width: 200px;
+        height: 300px;
+        border-radius: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>z-index 스타일 프로퍼티</h3>
+    <hr />
+    <div class="card-container">
+      <div id="card1" class="card"><img src="aDiamondRed.png" /></div>
+      <div id="card2" class="card"><img src="redKing.png" /></div>
+      <div id="card3" class="card"><img src="twoSpade.png" /></div>
+      <div id="card4" class="card"><img src="fourHeart.png" /></div>
+    </div>
+
+    <script>
+      // 카드 리스트 가져오기
+      const cards = document.querySelectorAll(".card");
+      let zIndex = 0;
+
+      // 각 카드를 클릭할 때마다 zIndex값을 감소시켜서 카드 겹침 효과 구현
+      cards.forEach((card) => {
+        card.addEventListener("click", () => {
+          zIndex--;
+          card.style.zIndex = zIndex;
+        });
+      });
+    </script>
+  </body>
+</html>

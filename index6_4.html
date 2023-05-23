@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>라디오 버튼을 클릭</title>
+    <script>
+      function drawImage() {
+        let found = null;
+        const sel = document.getElementsByName("fruits"); // fruits 이름을 가진 모든 태그를 찾는 코드
+        const img = document.getElementById("fruitimage"); // 찾고자하는 id 값을 찾는 코드
+        // 라디오 버튼 중 체크된 항목을 찾음
+        for (i = 0; i < sel.length; i++) {
+          if (sel[i].checked == true) {
+            found = sel[i];
+            break;
+          }
+        }
+        // 선택된 이미지 파일의 경로를 이미지 태그에 삽입
+        img.src = found.value;
+      }
+    </script>
+  </head>
+  <body onload="drawImage()">
+    <h3>라디오 버튼을 클릭하면 이미지를 출력합니다.</h3>
+    <hr />
+    <form>
+      <input
+        type="radio"
+        name="fruits"
+        value="banana.jpg"
+        onchange="drawImage()"
+      />바나나
+      <input
+        type="radio"
+        name="fruits"
+        value="mango.png"
+        onchange="drawImage()"
+      />망고
+      <input
+        type="radio"
+        name="fruits"
+        value="apple.jpg"
+        checked
+        onchange="drawImage()"
+      />사과
+      <br />
+      <img id="fruitimage" src="media/apple.png" width="100px" height="100px" />
+    </form>
+  </body>
+</html>

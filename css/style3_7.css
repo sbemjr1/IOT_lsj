@@ -1,0 +1,33 @@
+@keyframes rotate90 {
+  /*5단계로 설정*/
+  0% {
+    transform: none;
+  }
+  25% {
+    /*+90deg로 회전*/
+    transform: rotateZ(90deg);
+  }
+  50% {
+    /*원상태로 돌아옴*/
+    transform: none;
+  }
+  75% {
+    /*-90deg로 회전*/
+    transform: rotateZ(-90deg);
+  }
+  100% {
+    /*원상태로 돌아옴*/
+    transform: none;
+  }
+}
+body {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+img {
+  width: 300px;
+  height: 300px;
+  margin-top: 50px;
+  /*해당 태그에 animation 실행. 1초 동안 linear하게 -90도에서 90도 사이를 무한번 반복한다.*/
+  animation: rotate90 1s linear infinite;
+}

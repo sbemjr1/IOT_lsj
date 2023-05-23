@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>선택된 물품 계산하기</title>
+  </head>
+  <body>
+    <h3>물품을 선택하면 금액이 자동 계산됩니다</h3>
+    <hr />
+    <!-- checkbox를 클릭하면 value를 calc()함수에 입력. -->
+    <input type="checkbox" id="hat" value="10000" onclick="calc(this)" /> 모자
+    1만원
+    <input type="checkbox" id="shoes" value="30000" onclick="calc(this)" /> 구두
+    3만원
+    <input type="checkbox" id="bag" value="80000" onclick="calc(this)" />
+    명품가방 8만원
+    <br />
+
+    <!-- id를 부여하고 그 값을 0이라고 함. -->
+    지불하실 금액 <input type="text" value="0" id="result" />
+    <script>
+      let sum = 0;
+      const calc = (cBox) => {
+        /* value는 문자열이므로 parseInt로 정수형으로 바꿔서 덧셈 */
+        if (cBox.checked) sum += parseInt(cBox.value);
+        else sum -= parseInt(cBox.value);
+
+        /* 마지막 input의 값을 sum으로 저장 */
+        document.querySelector("#result").value = sum;
+      };
+    </script>
+  </body>
+</html>
